@@ -18,7 +18,8 @@ export default function TourDates({ tourdates }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch(`${process.env.Base_URL}/api/tourdates`);
+  const baseUrl = process.env.BASE_URL || 'https://band-store-next.vercel.app';
+  const res = await fetch(`${baseUrl}/api/tourdates`);
   const tourdates = await res.json();
 
   return {
