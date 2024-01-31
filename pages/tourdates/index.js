@@ -18,7 +18,7 @@ export default function TourDates({ tourdates }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch('http://localhost:3000/api/tourdates');
+  const res = await fetch(`${process.env.Base_URL}/api/tourdates`);
   const tourdates = await res.json();
 
   return {
