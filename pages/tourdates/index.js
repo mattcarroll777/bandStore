@@ -1,5 +1,3 @@
-// pages/tourdates.js
-
 import React from 'react';
 
 export default function TourDates({ tourdates }) {
