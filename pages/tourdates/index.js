@@ -1,16 +1,10 @@
+import TourdatesList from '@/components/TourdatesList';
 import React from 'react';
 
 export default function TourDates({ tourdates }) {
   return (
     <div>
-      <h1>Tour Dates</h1>
-      <ul>
-        {tourdates.map((tourdate, index) => (
-          <li key={index}>
-            {tourdate.date} - {tourdate.venue}
-          </li>
-        ))}
-      </ul>
+      <TourdatesList tourdates={tourdates} />
     </div>
   );
 }
