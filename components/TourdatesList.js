@@ -5,7 +5,7 @@ export default function TourdatesList({ tourdates }) {
     <>
       <h1>Tour Dates </h1>
       {tourdates.map((tourdate) => (
-        <TourdateItem key={tourdate.id} tourdate={tourdate} />
+        <TourdateItem key={tourdate._id.toString()} tourdate={tourdate} />
       ))}
     </>
   );
