@@ -1,11 +1,10 @@
 export default function TDILocation({ venue, city, state, country }) {
   return (
-    <div>
-      <div>{venue}</div>
-      <div className="flex items-center justify-between">
-        <div>{city}</div>
-        <div>{state}</div>
-        <div>{country}</div>
+    <div className="text-center p-4">
+      <div className="text-lg font-semibold">{venue}</div>
+      <div className="text-sm text-gray-600 mt-2">
+        {city}, {state && <span>{state}, </span>}
+        {country}
       </div>
     </div>
   );

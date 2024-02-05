@@ -10,10 +10,10 @@ export default function NavBar() {
         <Link className="mx-4" href={'/tourdates'}>
           Tour
         </Link>
-        <Link className="mx-4" href={'/tourdates'}>
+        <Link className="mx-4" href={'/shop'}>
           Shop
         </Link>
-        <Link className="mx-4" href={'/tourdates'}>
+        <Link className="mx-4" href={'/about'}>
           About
         </Link>
       </div>

@@ -5,15 +5,15 @@ import TDITickets from './TourdateItems/TDITickets';
 
 export default function TourdateItem({ tourdate }) {
   return (
-    <div className="flex items-center justify-between w-full">
-      <div className="flex-1">
+    <div className="flex flex-col md:flex-row items-center justify-between w-full p-4 bg-white shadow-lg rounded-lg my-2">
+      <div className="md:flex-1">
         <TDIDate
           date={tourdate.date}
           time={tourdate.time}
           timezone={tourdate.timezone}
         />
       </div>
-      <div className="flex-1 text-center">
+      <div className="md:flex-2 text-center">
         <TDILocation
           venue={tourdate.venue}
           city={tourdate.city}
@@ -21,10 +21,10 @@ export default function TourdateItem({ tourdate }) {
           country={tourdate.country}
         />
       </div>
-      <div className="flex-1 text-center">
+      <div className="md:flex-1 text-center md:text-left">
         {tourdate.notes && <TDINote note={tourdate.notes} />}
       </div>
-      <div className="flex-1 text-right">
+      <div className="md:flex-1 text-right">
         <TDITickets />
       </div>
     </div>
