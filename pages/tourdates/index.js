@@ -11,7 +11,7 @@ export default function TourDates({ tourdates }) {
 
 export async function getServerSideProps() {
   const baseUrl =
-    process.env.BASE_URL ||
+    'http://localhost:3000/' ||
     'https://band-store-next-git-main-mattcarroll777.vercel.app/';
   const res = await fetch(`${baseUrl}/api/tourdates`);
   const tourdates = await res.json();

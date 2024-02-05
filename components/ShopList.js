@@ -1,46 +1,33 @@
+import React, { useState } from 'react';
 import ShopItem from './ShopItem';
+import ShopBTN from './ShopBTN';
 
-const dummyData = [
-  {
-    id: 1,
-    name: 'shirt',
-    price: 1999,
-    description: 'lorem lipsum product lorem lipsum',
-  },
-  {
-    id: 2,
-    name: 'long sleeve shirt',
-    price: 2999,
-    description: 'lorem lipsum product lorem lipsum',
-  },
-  {
-    id: 3,
-    name: 'sweatshirt',
-    price: 4999,
-    description: 'lorem lipsum product lorem lipsum',
-  },
-  {
-    id: 4,
-    name: 'tank top',
-    price: 2250,
-    description: 'lorem lipsum product lorem lipsum',
-  },
-  {
-    id: 5,
-    name: 'shirt',
-    price: 2499,
-    description: 'lorem lipsum product lorem lipsum',
-  },
-];
+export default function ShopList({ products }) {
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
-export default function ShopList() {
   return (
-    <div className="mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-center mb-6"> Shop List </h1>
+    <div className="container mx-auto px-4">
+      <h1 className="text-3xl font-bold text-center my-10">Shop</h1>
+      <div className="flex flex-col sm:flex-row justify-between items-center w-full p-4">
+        <ShopBTN
+          title={'Clothing'}
+          onClick={() => setSelectedCategory('clothing')}
+        />
+        <ShopBTN title={'Vinyl'} onClick={() => setSelectedCategory('vinyl')} />
+        <ShopBTN title={'Misc'} onClick={() => setSelectedCategory('misc')} />
+        <ShopBTN title={'All'} onClick={() => setSelectedCategory('all')} />
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-        {dummyData.map((product) => (
-          <ShopItem key={product.id} product={product} />
-        ))}
+        {products
+          .filter(
+            (product) =>
+              selectedCategory === 'all' ||
+              (product.type ? product.type === selectedCategory : false)
+          )
+          .map((product) => (
+            <ShopItem key={product._id.toString()} product={product} />
+          ))}
       </div>
     </div>
   );
