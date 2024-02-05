@@ -10,7 +10,7 @@ export default function Shop({ products }) {
 
 export async function getServerSideProps() {
   const baseUrl =
-    'http://localhost:3000/' ||
+    // 'http://localhost:3000/' ||
     'https://band-store-next-git-main-mattcarroll777.vercel.app/';
   const res = await fetch(`${baseUrl}/api/shop`);
   const products = await res.json();
