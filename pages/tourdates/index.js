@@ -4,6 +4,7 @@ import React from 'react';
 export default function TourDates({ tourdates }) {
   return (
     <div>
+      <h1 className="p-10 text-white text-center text-xl">Tour Dates</h1>
       <TourdatesList tourdates={tourdates} />
     </div>
   );

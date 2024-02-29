@@ -1,3 +1,3 @@
 export default function SIName({ name }) {
-  return <h2 className="text-lg font-semibold">{name}</h2>;
+  return <h2 className="text-lg text-white text-center font-bold">{name}</h2>;
 }

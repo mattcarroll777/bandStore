@@ -5,7 +5,7 @@ import TDITickets from './TourdateItems/TDITickets';
 
 export default function TourdateItem({ tourdate }) {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between w-full p-4 bg-white shadow-lg rounded-lg my-2">
+    <div className="flex flex-col md:flex-row items-center text-white justify-between w-full p-4 rounded-lg my-2 border-2 border-custom-sec">
       <div className="md:flex-1">
         <TDIDate
           date={tourdate.date}

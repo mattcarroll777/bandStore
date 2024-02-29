@@ -3,6 +3,7 @@ import ShopList from '@/components/ShopList';
 export default function Shop({ products }) {
   return (
     <div>
+      <h1 className="p-10 text-white text-center text-xl">SHOP</h1>
       <ShopList products={products} />
     </div>
   );

@@ -32,8 +32,8 @@ export default function TDIDate({ date, time, timezone }) {
 
   return (
     <div className="text-center sm:text-center p-4">
-      <div className="text-lg font-semibold">{formatDate(date)}</div>
-      <div className="text-sm text-gray-600 mt-2">
+      <div className="text-lg font-bold">{formatDate(date)}</div>
+      <div className="text-sm font-semibold mt-2">
         {time} {timezone}
       </div>
     </div>

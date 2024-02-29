@@ -7,7 +7,6 @@ export default function ShopList({ products }) {
 
   return (
     <div className="container mx-auto px-4">
-      <h1 className="text-3xl font-bold text-center my-10">Shop</h1>
       <div className="flex flex-col sm:flex-row justify-between items-center w-full p-4">
         <ShopBTN
           title={'Clothing'}
@@ -18,7 +17,7 @@ export default function ShopList({ products }) {
         <ShopBTN title={'All'} onClick={() => setSelectedCategory('all')} />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {products
           .filter(
             (product) =>
