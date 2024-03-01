@@ -5,7 +5,14 @@ export default function NavBar() {
   return (
     <nav className="flex items-center justify-between px-4 py-2 bg-black text-white border-b-2 border-custom-sec">
       <div>
-        <Image width={123} height={102} src="/BandLogo.webp" alt="/next.svg" />
+        <Link href={'/'}>
+          <Image
+            width={123}
+            height={102}
+            src="/BandLogo.webp"
+            alt="/next.svg"
+          />
+        </Link>
       </div>
       <div>
         <Link className="mx-4 font-family-oswald" href={'/'}>
